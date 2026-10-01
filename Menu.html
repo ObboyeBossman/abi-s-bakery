@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extended Ghanaian Pastry Menu — Abi's Bakery</title>
+    <meta name="description" content="Explore our full collection of authentic Ghanaian meat pies, sweet golden bofrot, butter bread, rock buns, and custom celebration cakes. Contact Abigail Amoah for custom batch orders.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥐</text></svg>">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Master Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Mobile Navigation Overlay Backdrop -->
+    <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
+
+    <!-- Header Navigation -->
+    <header id="main-header">
+        <div class="container">
+            <a href="Index.html" class="logo" aria-label="Abi's Bakery Home">
+                <div class="logo-icon">
+                    <i class="fas fa-bread-slice"></i>
+                </div>
+                <div class="logo-text">
+                    <h1>Abi's Bakery</h1>
+                    <p>Since 2019 · Accra, Ghana</p>
+                </div>
+            </a>
+
+            <!-- Navigation Links & Mobile Drawer -->
+            <nav class="main-nav" aria-label="Main Navigation">
+                <div class="mobile-drawer-header">
+                    <div class="logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-bread-slice"></i>
+                        </div>
+                        <div class="logo-text">
+                            <h3>Abi's Bakery</h3>
+                            <p>Handmade in Ghana</p>
+                        </div>
+                    </div>
+                    <button type="button" class="drawer-close-btn" aria-label="Close navigation menu">&times;</button>
+                </div>
+
+                <ul class="nav-list">
+                    <li><a href="Index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="Index.html#featured"><i class="fas fa-star"></i> Specialties</a></li>
+                    <li><a href="Menu.html" class="active"><i class="fas fa-utensils"></i> Full Catalog</a></li>
+                    <li><a href="Index.html#gallery"><i class="fas fa-images"></i> Gallery</a></li>
+                    <li><a href="Index.html#about"><i class="fas fa-book-open"></i> Meet Abigail</a></li>
+                    <li><a href="Index.html#testimonials"><i class="fas fa-comments"></i> Reviews</a></li>
+                    <li><a href="Index.html#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+
+                <div class="mobile-drawer-footer">
+                    <a href="Index.html#order" class="btn btn-primary mobile-order-btn">
+                        <i class="fas fa-comment-dots"></i> Request Order Quote
+                    </a>
+                    <button type="button" class="btn btn-whatsapp" onclick="openWhatsAppInquiry()">
+                        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                    </button>
+                    <div class="mobile-drawer-contact">
+                        <p><i class="fas fa-phone"></i> <a href="tel:+233549946550" style="color: inherit; text-decoration: none;">+233 54 994 6550</a></p>
+                        <p>Accra, Ghana · Daily Bakes</p>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="header-actions">
+                <a href="Index.html#order" class="cart-indicator" title="View Selected Inquiries" aria-label="Inquiry list">
+                    <i class="fas fa-clipboard-list"></i>
+                    <span class="cart-text">Inquiries</span>
+                    <span class="cart-badge-count" style="display: none;">0</span>
+                </a>
+                <a href="Index.html#order" class="btn btn-primary btn-sm">Contact for Orders</a>
+                
+                <button class="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span class="hamburger-icon"></span>
+                    <span class="hamburger-icon"></span>
+                    <span class="hamburger-icon"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menu Page Hero -->
+    <section id="menu-hero">
+        <div class="container">
+            <div style="max-width: 760px; text-align: center; margin: 0 auto;">
+                <span class="hero-badge">
+                    <i class="fas fa-utensils"></i> Handcrafted in Ghana
+                </span>
+                <h1 style="color: var(--white); font-size: 3.4rem; margin-bottom: 16px;">Our Ghanaian Pastries &amp; Bakes</h1>
+                <p style="color: rgba(255, 255, 255, 0.9); font-size: 1.2rem; line-height: 1.6;">Every batch of meat pies, bofrot, and butter bread is baked fresh upon request. <strong>Prices are tailored to your order size—please contact Abigail Amoah directly for your quote.</strong></p>
+                <div style="margin-top: 24px; display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
+                    <button type="button" class="btn btn-whatsapp" onclick="openWhatsAppInquiry()">
+                        <i class="fab fa-whatsapp"></i> Chat with Abigail on WhatsApp
+                    </button>
+                    <a href="Index.html#order" class="btn btn-primary">
+                        <i class="fas fa-clipboard-list"></i> Submit Inquiry Form
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Menu Catalog -->
+    <section id="menu" style="background: var(--cream-bg); padding: 70px 0 100px 0;">
+        <div class="container">
+            <!-- Owner Pricing Notice Banner -->
+            <div class="owner-pricing-notice">
+                <div class="notice-icon"><i class="fas fa-hand-holding-heart"></i></div>
+                <div class="notice-text">
+                    <h4><i class="fas fa-shield-alt"></i> Authentic Locally Made Pastries in Ghana • No Set Online Prices</h4>
+                    <p>Every single pastry is baked fresh to order by owner <strong>Abigail Amoah</strong> using authentic Ghanaian recipes. <strong>We do not allocate any prices here—customers must contact the owner first</strong> to discuss quantities, custom batch requests, and obtain an exact personalized quote.</p>
+                </div>
+                <div class="notice-actions">
+                    <a href="Index.html#order" class="btn btn-sm btn-primary"><i class="fas fa-file-invoice"></i> Inquire Now</a>
+                    <button type="button" class="btn btn-sm btn-whatsapp" onclick="openWhatsAppInquiry('', '', 'Hello Abigail, I am contacting you first regarding pastry pricing and availability')">
+                        <i class="fab fa-whatsapp"></i> Chat Owner
+                    </button>
+                </div>
+            </div>
+
+            <!-- Tab Controls -->
+            <div class="menu-filter-bar">
+                <button type="button" class="tab-btn active" data-tab="all">All Items</button>
+                <button type="button" class="tab-btn" data-tab="savory">Savory Pastries</button>
+                <button type="button" class="tab-btn" data-tab="sweet">Sweet Snacks &amp; Bakes</button>
+                <button type="button" class="tab-btn" data-tab="breads">Breads &amp; Cakes</button>
+            </div>
+
+            <div class="menu-categories" style="grid-template-columns: repeat(2, 1fr); gap: 32px;">
+                
+                <!-- Savory Pastries Pane -->
+                <div class="menu-category-card tab-pane active" id="savory">
+                    <div class="category-header">
+                        <i class="fas fa-pie-chart"></i>
+                        <h3>Savory Pastries &amp; Party Platters</h3>
+                    </div>
+                    <div class="menu-list">
+                        <div class="menu-item-row">
+                            <div class="item-top">
+                                <span class="item-name">Classic Ghanaian Meat Pie</span>
+                                <span class="item-price-inquire"><i class="fas fa-user-clock"></i> Contact Owner First</span>
+                            </div>
+                            <p class="item-desc">Golden flaky shortcrust filled with spiced minced beef, potatoes, carrots, and sweet onions.</p>
+                            <div class="item-actions">
+                                <span class="dietary-tag">Bestseller</span>
+                                <div class="item-action-btns">
+                                    <button type="button" class="add-to-inquiry-btn" data-name="Classic Ghanaian Meat Pie" data-category="Savory Pastries">
+                                        <i class="fas fa-plus"></i> Inquire
+                                    </button>
+                                    <button type="button" class="btn-whatsapp-sm" onclick="openWhatsAppInquiry('', '', 'Inquiring about Classic Ghanaian Meat Pie')">
+                                        <i class="fab fa-whatsapp"></i> Chat Abi
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-item-row">
+                            <div class="item-top">
+                                <span class="item-name">Spiced Tuna &amp; Mackerel Fish Pie</span>
+                                <span class="item-price-inquire"><i class="fas fa-user-clock"></i> Contact Owner First</span>
+                            </div>
+                            <p class="item-desc">Crisp golden pastry packed with seasoned flaked ocean fish, bell peppers, scallions, and a hint of pepper.</p>
+                            <div class="item-actions">
+                                <span class="dietary-tag">Popular</span>
+                                <div class="item-action-btns">
+                                    <button type="button" class="add-to-inquiry-btn" data-name="Spiced Fish Pie" data-category="Savory Pastries">
+                                        <i class="fas fa-plus"></i> Inquire
+                                    </button>
+                                    <button type="button" class="btn-whatsapp-sm" onclick="openWhatsAppInquiry('', '', 'Inquiring about Spiced Fish Pie')">
+                                        <i class="fab fa-whatsapp"></i> Chat Abi
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-item-row">
+                            <div class="item-top">
+                                <span class="item-name">Ghanaian Puff Sausage Roll</span>
+                                <span class="item-price-inquire"><i class="fas fa-user-clock"></i> Contact Owner First</span>
+                            </div>
+                            <p class="item-desc">Tender spiced sausage filling wrapped inside crisp, buttery laminated pastry with cracked black pepper.</p>
+                            <div class="item-actions">
+                                <span class="dietary-tag">Party Favorite</span>
+                                <div class="item-action-btns">
+                                    <button type="button" class="add-to-inquiry-btn" data-name="Ghanaian Sausage Roll" data-category="Savory Pastries">
+                                        <i class="fas fa-plus"></i> Inquire
+                                    </button>
+                                    <button type="button" class="btn-whatsapp-sm" onclick="openWhatsAppInquiry('', '', 'Inquiring about Ghanaian Sausage Rolls')">
+                                        <i class="fab fa-whatsapp"></i> Chat Abi
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-item-row">
+                            <div class="item-top">
+                                <span class="item-name">Crispy Samosas &amp; Spring Rolls Platter</span>
+                                <span class="item-price-inquire"><i class="fas fa-user-clock"></i> Contact Owner First</span>
+                            </div>
+                            <p class="item-desc">Crunchy cocktail spring rolls and spiced meat or veggie samosas, freshly fried for parties and gatherings.</p>
+                            <div class="item-actions">
+                                <span class="dietary-tag">Event Special</span>
+                                <div class="item-action-btns">
+                                    <button type="button" class="add-to-inquiry-btn" data-name="Samosas & Spring Rolls Platter" data-category="Savory Pastries">
+                                        <i class="fas fa-plus"></i> Inquire
+                                    </button>
+                                    <button type="button" class="btn-whatsapp-sm" onclick="openWhatsAppInquiry('', '', 'Inquiring about Samosas & Spring Rolls Platter')">
+                                        <i class="fab fa-whatsapp"></i> Chat Abi
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sweet Snacks Pane -->
+                <div class="menu-category-card tab-pane active" id="sweet">
+                    <div class="category-header">
+                        <i class="fas fa-cookie-bite"></i>
+                        <h3>Traditional Sweet Bakes &amp; Snacks</h3>
+                    </div>
+                    <div class="menu-list">
+                        <div class="menu-item-row">
+                            <div class="item-top">
+                                <span class="item-name">Sweet Golden Bofrot (Togbei)</span>
+                                <span class="item-price-inquire"><i class="fas fa-user-clock"></i> Contact Owner First</span>
+                            </div>
+                            <p class="item-desc">Authentic Ghanaian puff puff. Warm, pillowy, golden fried dough balls delicately scented with ground nutmeg.</p>
+                            <div class="item-actions">
+                                <span class="dietary-tag">Signature</span>
+                                <div class="item-action-btns">
+                                    <button type="button" class="add-to-inquiry-btn" data-name="Sweet Golden Bofrot" data-category="Sweet Snacks">
+                                        <i class="fas fa-plus"></i> Inquire
+                                    </button>
+                                    <button type="button" class="btn-whatsapp-sm" onclick="openWhatsAppInquiry('', '', 'Inquiring about Sweet Golden Bofrot')">
+                                        <i class="fab fa-whatsapp"></i> Chat Abi
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-item-row">
+                            <div class="item-top">
+                                <span class="item-name">Ghanaian Rock Buns</span>
+                                <span class="item-price-inquire"><i class="fas fa-user-clock"></i> Contact Owner First</span>
+                            </div>
+                            <p class="item-desc">Traditional crumbly, sweet tea buns loaded with plump sultanas, pure butter, and Madagascar vanilla.</p>
+                            <div class="item-actions">
+                                <span class="dietary-tag">Tea Time</span>
+                                <div class="item-action-btns">
+                                    <button type="button" class="add-to-inquiry-btn" data-name="Ghanaian Rock Buns" data-category="Sweet Snacks">
+                                        <i class="fas fa-plus"></i> Inquire
+                                    </button>
+                                    <button type="button" class="btn-whatsapp-sm" onclick="openWhatsAppInquiry('', '', 'Inquiring about Ghanaian Rock Buns')">
+                                        <i class="fab fa-whatsapp"></i> Chat Abi
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-item-row">
+                            <div class="item-top">
+                                <span class="item-name">Crunchy Atwemo (Chin Chin Jars)</span>
+                                <span class="item-price-inquire"><i class="fas fa-user-clock"></i> Contact Owner First</span>
+                            </div>
+                            <p class="item-desc">Crispy sweet deep-fried Ghanaian pastry ribbons with warm nutmeg notes. Packed in sharing jars or snack pouches.</p>
+                            <div class="item-actions">
+                                <span class="dietary-tag">Snack Favorite</span>
+                                <div class="item-action-btns">
+                                    <button type="button" class="add-to-inquiry-btn" data-name="Crunchy Atwemo" data-category="Sweet Snacks">
+                                        <i class="fas fa-plus"></i> Inquire
+                                    </button>
+                                    <button type="button" class="btn-whatsapp-sm" onclick="openWhatsAppInquiry('', '', 'Inquiring about Crunchy Atwemo')">
+                                        <i class="fab fa-whatsapp"></i> Chat Abi
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Nkate Cake -->
+                        <div class="menu-item-row">
+                            <div class="item-top">
+                                <span class="item-name">Traditional Nkate Cake (Groundnut Brittle)</span>
+                                <span class="item-price-inquire"><i class="fas fa-user-clock"></i> Contact Owner First</span>
+                            </div>
+                            <p class="item-desc">Classic crunchy Ghanaian roasted groundnut and caramelized sugar confectionery brittle squares, freshly made.</p>
+                            <div class="item-actions">
+                                <span class="dietary-tag">Local Heritage</span>
+                                <div class="item-action-btns">
+                                    <button type="button" class="add-to-inquiry-btn" data-name="Traditional Nkate Cake" data-category="Sweet Snacks">
+                                        <i class="fas fa-plus"></i> Inquire
+                                    </button>
+                                    <button type="button" class="btn-whatsapp-sm" onclick="openWhatsAppInquiry('', '', 'Inquiring about Traditional Nkate Cake')">
+                                        <i class="fab fa-whatsapp"></i> Chat Abi
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Ghanaian Poloo -->
+                        <div class="menu-item-row">
+                            <div class="item-top">
+                                <span class="item-name">Crispy Ghanaian Poloo (Coconut Toffee Chips)</span>
+                                <span class="item-price-inquire"><i class="fas fa-user-clock"></i> Contact Owner First</span>
+                            </div>
+                            <p class="item-desc">Traditional sweet coconut biscuit chips fried with freshly grated local coconuts, vanilla, and pure cane sugar.</p>
+                            <div class="item-actions">
+                                <span class="dietary-tag">Local Snack</span>
+                                <div class="item-action-btns">
+                                    <button type="button" class="add-to-inquiry-btn" data-name="Crispy Ghanaian Poloo" data-category="Sweet Snacks">
+                                        <i class="fas fa-plus"></i> Inquire
+                                    </button>
+                                    <button type="button" class="btn-whatsapp-sm" onclick="openWhatsAppInquiry('', '', 'Inquiring about Ghanaian Poloo')">
+                                        <i class="fab fa-whatsapp"></i> Chat Abi
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-item-row">
+                            <div class="item-top">
+                                <span class="item-name">Spiced Plantain &amp; Ginger Loaf</span>
+                                <span class="item-price-inquire"><i class="fas fa-user-clock"></i> Contact Owner First</span>
+                            </div>
+                            <p class="item-desc">Dense, moist artisan sweet loaf prepared with sweet ripe plantains, local ginger, and cinnamon butter.</p>
+                            <div class="item-actions">
+                                <span class="dietary-tag">Artisan Bake</span>
+                                <div class="item-action-btns">
+                                    <button type="button" class="add-to-inquiry-btn" data-name="Spiced Plantain Loaf" data-category="Sweet Snacks">
+                                        <i class="fas fa-plus"></i> Inquire
+                                    </button>
+                                    <button type="button" class="btn-whatsapp-sm" onclick="openWhatsAppInquiry('', '', 'Inquiring about Spiced Plantain Loaf')">
+                                        <i class="fab fa-whatsapp"></i> Chat Abi
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Breads & Custom Cakes Pane -->
+                <div class="menu-category-card tab-pane active" id="breads" style="grid-column: span 2;">
+                    <div class="category-header">
+                        <i class="fas fa-bread-slice"></i>
+                        <h3>Traditional Ghanaian Breads &amp; Custom Celebration Cakes</h3>
+                    </div>
+                    <div class="menu-list" style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+                        <div class="menu-item-row">
+                            <div class="item-top">
+                                <span class="item-name">Authentic Ghanaian Butter Bread</span>
+                                <span class="item-price-inquire"><i class="fas fa-user-clock"></i> Contact Owner First</span>
+                            </div>
+                            <p class="item-desc">Sweet, soft, dense loaf with golden brown crust. Perfect paired with hot morning tea, fried eggs, or Milo.</p>
+                            <div class="item-actions">
+                                <span class="dietary-tag">Heritage Bread</span>
+                                <div class="item-action-btns">
+                                    <button type="button" class="add-to-inquiry-btn" data-name="Authentic Ghanaian Butter Bread" data-category="Breads">
+                                        <i class="fas fa-plus"></i> Inquire
+                                    </button>
+                                    <button type="button" class="btn-whatsapp-sm" onclick="openWhatsAppInquiry('', '', 'Inquiring about Ghanaian Butter Bread')">
+                                        <i class="fab fa-whatsapp"></i> Chat Abi
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-item-row">
+                            <div class="item-top">
+                                <span class="item-name">Traditional Ghanaian Sugar Bread</span>
+                                <span class="item-price-inquire"><i class="fas fa-user-clock"></i> Contact Owner First</span>
+                            </div>
+                            <p class="item-desc">Fragrant, pull-apart sweet bakery bread with a caramelized glaze. Freshly baked every dawn.</p>
+                            <div class="item-actions">
+                                <span class="dietary-tag">Sweet Loaf</span>
+                                <div class="item-action-btns">
+                                    <button type="button" class="add-to-inquiry-btn" data-name="Traditional Sugar Bread" data-category="Breads">
+                                        <i class="fas fa-plus"></i> Inquire
+                                    </button>
+                                    <button type="button" class="btn-whatsapp-sm" onclick="openWhatsAppInquiry('', '', 'Inquiring about Ghanaian Sugar Bread')">
+                                        <i class="fab fa-whatsapp"></i> Chat Abi
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-item-row">
+                            <div class="item-top">
+                                <span class="item-name">Custom Birthday &amp; Wedding Cakes</span>
+                                <span class="item-price-inquire"><i class="fas fa-user-clock"></i> Contact Owner First</span>
+                            </div>
+                            <p class="item-desc">Custom celebration cakes tailored for birthdays, traditional Ghanaian weddings, and family anniversaries.</p>
+                            <div class="item-actions">
+                                <span class="dietary-tag">Bespoke Design</span>
+                                <div class="item-action-btns">
+                                    <button type="button" class="add-to-inquiry-btn" data-name="Custom Celebration Cake" data-category="Cakes">
+                                        <i class="fas fa-plus"></i> Inquire
+                                    </button>
+                                    <button type="button" class="btn-whatsapp-sm" onclick="openWhatsAppInquiry('', '', 'Inquiring about Custom Celebration Cake')">
+                                        <i class="fab fa-whatsapp"></i> Chat Abi
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-item-row">
+                            <div class="item-top">
+                                <span class="item-name">Rich Spiced Fruit &amp; Nut Cake</span>
+                                <span class="item-price-inquire"><i class="fas fa-user-clock"></i> Contact Owner First</span>
+                            </div>
+                            <p class="item-desc">Traditional rich dark fruit cake soaked with aromatic flavors, mixed dried fruits, and warm holiday spices.</p>
+                            <div class="item-actions">
+                                <span class="dietary-tag">Special Occasions</span>
+                                <div class="item-action-btns">
+                                    <button type="button" class="add-to-inquiry-btn" data-name="Spiced Fruit Cake" data-category="Cakes">
+                                        <i class="fas fa-plus"></i> Inquire
+                                    </button>
+                                    <button type="button" class="btn-whatsapp-sm" onclick="openWhatsAppInquiry('', '', 'Inquiring about Spiced Fruit Cake')">
+                                        <i class="fab fa-whatsapp"></i> Chat Abi
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Ready to Order Bottom Call to Action -->
+            <div class="menu-cta-banner" style="margin-top: 60px;">
+                <div class="menu-cta-text">
+                    <h4>Ready to place an order or discuss custom catering?</h4>
+                    <p>Contact Abigail Amoah directly on WhatsApp or submit the inquiry form with your chosen pastries.</p>
+                </div>
+                <div class="menu-cta-buttons">
+                    <button type="button" class="btn btn-whatsapp" onclick="openWhatsAppInquiry()">
+                        <i class="fab fa-whatsapp"></i> Chat with Abigail on WhatsApp
+                    </button>
+                    <a href="Index.html#order" class="btn btn-primary" style="font-size: 1.05rem;">
+                        <i class="fas fa-clipboard-list"></i> Proceed to Order Inquiries
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-bread-slice"></i>
+                        </div>
+                        <div class="logo-text">
+                            <h1>Abi's Bakery</h1>
+                            <p>Accra, Ghana</p>
+                        </div>
+                    </div>
+                    <p>Fresh. Homemade. Delicious. Handcrafting authentic Ghanaian meat pies, bofrot, butter bread, and custom celebration cakes with pride.</p>
+                </div>
+
+                <div class="footer-col footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="Index.html">Home</a></li>
+                        <li><a href="Index.html#featured">Specialties</a></li>
+                        <li><a href="Menu.html">Extended Catalog</a></li>
+                        <li><a href="Index.html#gallery">Bakery Gallery</a></li>
+                        <li><a href="Index.html#about">About Abigail</a></li>
+                        <li><a href="Index.html#order">Order Inquiry</a></li>
+                        <li><a href="Index.html#contact">Contact &amp; Location</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col footer-contact-info">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Accra, Ghana</p>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+233549946550" style="color: inherit; text-decoration: none;">+233 54 994 6550</a></p>
+                    <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/233549946550" style="color: inherit; text-decoration: none;" target="_blank" rel="noopener noreferrer">WhatsApp: 054 994 6550</a></p>
+                    <p><i class="fas fa-envelope"></i> hello@abisbakery.com</p>
+                </div>
+
+                <div class="footer-col footer-newsletter">
+                    <h3>Stay In Touch</h3>
+                    <p>Join our sweet circle to get weekly specials on fresh Ghanaian pastries and holiday bake boxes.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required aria-label="Email address for newsletter">
+                        <button type="submit" class="btn btn-primary">Join</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Abi's Bakery by Abigail Amoah. Handcrafted in Ghana. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
