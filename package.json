@@ -4,7 +4,6 @@
   "private": true,
   "description": "Abi's Bakery website",
   "scripts": {
-    "dev": "node dev-server.js",
     "build": "node -e \"console.log('Static site ready for Vercel deployment')\"",
     "deploy": "vercel --prod"
   }
