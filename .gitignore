@@ -1,4 +1,3 @@
-# Dependencies & Build
 .vercel
 node_modules/
 
@@ -10,3 +9,4 @@ ehthumbs.db
 # Logs & temp
 *.log
 .tempmediaStorage/
+npm-debug.log*
